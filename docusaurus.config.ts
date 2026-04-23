@@ -2,23 +2,6 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-declare const process: {
-  env: Record<string, string | undefined>;
-};
-
-function normalizeBaseUrl(value: string): string {
-  const trimmed = value.trim();
-
-  if (trimmed === '' || trimmed === '/') {
-    return '/';
-  }
-
-  return `/${trimmed.replace(/^\/+|\/+$/g, '')}/`;
-}
-
-const docsSiteUrl = process.env.DOCS_SITE_URL ?? 'https://docs.clickcollect.coffee';
-const docsBaseUrl = normalizeBaseUrl(process.env.DOCS_BASE_URL ?? '/');
-
 const config: Config = {
   title: 'ClickCollect.coffee Docs',
   tagline: 'Operational guides for branded order-ahead coffee storefronts.',
@@ -28,8 +11,8 @@ const config: Config = {
     v4: true,
   },
 
-  url: docsSiteUrl,
-  baseUrl: docsBaseUrl,
+  url: 'https://docs.clickcollect.coffee',
+  baseUrl: '/',
   organizationName: 'NaughtyBeanConsulting',
   projectName: 'SaaSClickCollectDocs',
 

@@ -60,15 +60,6 @@ You can also open the `Docs Pages` workflow in GitHub Actions and run it manuall
 
 1. In GitHub, open `Settings` -> `Pages`.
 2. Set the source to `GitHub Actions`.
-3. If you want to keep using a custom domain such as `docs.clickcollect.coffee`, set these repository variables in `Settings` -> `Secrets and variables` -> `Actions` -> `Variables`:
+3. Set the custom domain to `docs.clickcollect.coffee`.
 
-```text
-DOCS_SITE_URL=https://docs.clickcollect.coffee
-DOCS_BASE_URL=/
-```
-
-If you do not set those variables, the workflow defaults to the standard project Pages URL:
-
-```text
-https://<owner>.github.io/<repo>/
-```
+This repo is now hard-wired to deploy at `https://docs.clickcollect.coffee/` with `/` as the base path. If you ever want to deploy it as a project Pages site instead, update [docusaurus.config.ts](/home/naughtybean/github/SaaSClickCollectDocs/docusaurus.config.ts) and the Pages workflow together.
