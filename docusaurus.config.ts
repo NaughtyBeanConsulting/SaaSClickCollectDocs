@@ -2,8 +2,6 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 declare const process: {
   env: Record<string, string | undefined>;
 };
@@ -22,31 +20,20 @@ const docsSiteUrl = process.env.DOCS_SITE_URL ?? 'https://docs.clickcollect.coff
 const docsBaseUrl = normalizeBaseUrl(process.env.DOCS_BASE_URL ?? '/');
 
 const config: Config = {
-  title: 'ClickCollect Docs',
-  tagline: 'Portal guides for storefront operators',
-  favicon: 'img/favicon.ico',
+  title: 'ClickCollect.coffee Docs',
+  tagline: 'Operational guides for branded order-ahead coffee storefronts.',
+  favicon: 'img/ClickCollectLogo1024x1024.png',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: docsSiteUrl,
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: docsBaseUrl,
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'naughtybean',
+  organizationName: 'NaughtyBeanConsulting',
   projectName: 'SaaSClickCollectDocs',
 
   onBrokenLinks: 'throw',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -69,16 +56,17 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/logo.svg',
+    image: 'img/social-card.svg',
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: 'dark',
+      disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'ClickCollect Docs',
+      title: 'ClickCollect.coffee Docs',
       logo: {
-        alt: 'ClickCollect Docs Logo',
-        src: 'img/logo.svg',
+        alt: 'ClickCollect.coffee logo',
+        src: 'img/ClickCollectLogo1024x1024.png',
       },
       items: [
         {
@@ -138,7 +126,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} ClickCollect Docs. Built with Docusaurus 3.10.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ClickCollect.coffee. Documentation for independent coffee operators.`,
     },
     prism: {
       theme: prismThemes.github,

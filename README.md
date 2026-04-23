@@ -1,14 +1,6 @@
-# Website
-
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
-
-
-
-
-
 # ClickCollect Docs
 
-Portal-focused documentation for ClickCollect.coffee, built with Docusaurus 3.10.
+Portal-focused documentation for ClickCollect.coffee.
 
 ## Requirements
 
@@ -20,20 +12,40 @@ If your default shell is already on Node 20+:
 
 ```bash
 npm install
-npm run start
+npm run start -- --host 0.0.0.0
 ```
 
 If your shell is still on Node 18, run the docs site through the Node 20 wrapper used during setup:
 
 ```bash
 npx -y -p node@20 -p npm@10 npm install
-npx -y -p node@20 -p npm@10 npm run start
+npx -y -p node@20 -p npm@10 npm run start -- --host 0.0.0.0
+```
+
+Then open:
+
+```text
+http://localhost:3000/
 ```
 
 ## Build
 
 ```bash
 npx -y -p node@20 -p npm@10 npm run build
+```
+
+## Preview the production build
+
+If your default shell is already on Node 20+:
+
+```bash
+npm run serve -- --host 0.0.0.0
+```
+
+If your shell is still on Node 18:
+
+```bash
+npx -y -p node@20 -p npm@10 npm run serve -- --host 0.0.0.0
 ```
 
 ## GitHub Pages CI/CD

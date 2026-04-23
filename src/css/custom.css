@@ -1,49 +1,161 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #8c4f2f;
-  --ifm-color-primary-dark: #7e472a;
-  --ifm-color-primary-darker: #774227;
-  --ifm-color-primary-darkest: #633720;
-  --ifm-color-primary-light: #995a35;
-  --ifm-color-primary-lighter: #a16139;
-  --ifm-color-primary-lightest: #b87247;
-  --ifm-background-color: #fffaf2;
-  --ifm-background-surface-color: #fffdf9;
-  --ifm-navbar-background-color: rgba(255, 250, 242, 0.92);
-  --ifm-footer-background-color: #261812;
-  --ifm-heading-color: #24130d;
-  --ifm-font-color-base: #443027;
-  --ifm-link-color: #8c4f2f;
-  --ifm-link-hover-color: #633720;
+  --ifm-color-primary: #818cf8;
+  --ifm-color-primary-dark: #6366f1;
+  --ifm-color-primary-darker: #4f46e5;
+  --ifm-color-primary-darkest: #4338ca;
+  --ifm-color-primary-light: #93a0ff;
+  --ifm-color-primary-lighter: #a5b4fc;
+  --ifm-color-primary-lightest: #c7d2fe;
+  --ifm-background-color: #0f172a;
+  --ifm-background-surface-color: #111c34;
+  --ifm-navbar-background-color: rgba(15, 23, 42, 0.76);
+  --ifm-footer-background-color: #09111f;
+  --ifm-heading-color: #ffffff;
+  --ifm-font-color-base: #dbe7ff;
+  --ifm-font-color-secondary: rgba(203, 213, 225, 0.78);
+  --ifm-link-color: #c4b5fd;
+  --ifm-link-hover-color: #fbbf24;
   --ifm-code-font-size: 95%;
-  --ifm-global-radius: 20px;
-  --docusaurus-highlighted-code-line-bg: rgba(140, 79, 47, 0.08);
+  --ifm-font-family-base: 'DM Sans', 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --ifm-global-radius: 24px;
+  --ifm-card-background-color: rgba(15, 23, 42, 0.74);
+  --ifm-toc-border-color: rgba(148, 163, 184, 0.16);
+  --ifm-menu-color-background-active: rgba(99, 102, 241, 0.16);
+  --ifm-menu-color-background-hover: rgba(99, 102, 241, 0.1);
+  --doc-border: rgba(148, 163, 184, 0.16);
+  --doc-surface: rgba(15, 23, 42, 0.74);
+  --doc-surface-strong: rgba(15, 23, 42, 0.9);
+  --doc-shadow: 0 30px 80px rgba(2, 6, 23, 0.28);
+  --docusaurus-highlighted-code-line-bg: rgba(99, 102, 241, 0.16);
 }
 
 html {
   background:
-    radial-gradient(circle at top left, rgba(230, 191, 160, 0.28), transparent 28%),
-    radial-gradient(circle at top right, rgba(61, 82, 77, 0.12), transparent 24%),
-    var(--ifm-background-color);
+    radial-gradient(circle at 12% 12%, rgba(99, 102, 241, 0.28), transparent 24%),
+    radial-gradient(circle at 84% 18%, rgba(147, 51, 234, 0.2), transparent 22%),
+    radial-gradient(circle at 68% 72%, rgba(251, 191, 36, 0.1), transparent 20%),
+    linear-gradient(180deg, #0f172a 0%, #09111f 100%);
 }
 
-body {
+body,
+.main-wrapper {
   background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+}
+
+a {
+  text-decoration-color: rgba(251, 191, 36, 0.35);
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
 }
 
 .navbar {
   backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(140, 79, 47, 0.08);
+  border-bottom: 1px solid var(--doc-border);
+  box-shadow: none;
 }
 
-.footer {
-  color: rgba(255, 248, 240, 0.82);
+.navbar__title {
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.navbar__link,
+.footer__link-item,
+.menu__link,
+.table-of-contents__link {
+  font-weight: 500;
+}
+
+.navbar__link:hover,
+.footer__link-item:hover,
+.menu__link:hover,
+.table-of-contents__link:hover,
+.pagination-nav__link:hover {
+  color: #ffffff;
+}
+
+.button {
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.button.button--primary {
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+  border: 0;
+  box-shadow: 0 18px 40px rgba(99, 102, 241, 0.24);
+  color: #ffffff;
+}
+
+.button.button--primary:hover {
+  background: linear-gradient(135deg, #7c83ff, #a855f7);
+  color: #ffffff;
+}
+
+.button.button--secondary {
+  background: rgba(15, 23, 42, 0.52);
+  border: 1px solid rgba(251, 191, 36, 0.28);
+  color: #f8fafc;
+}
+
+.button.button--secondary:hover {
+  background: rgba(251, 191, 36, 0.12);
+  color: #ffffff;
+}
+
+.menu__link,
+.pagination-nav__link,
+.card,
+.theme-doc-toc-desktop,
+.theme-doc-sidebar-container {
+  border-radius: 20px;
+}
+
+.menu__link--active {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.16), rgba(147, 51, 234, 0.18));
+  color: #ffffff;
+}
+
+.theme-doc-sidebar-container {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.36), rgba(15, 23, 42, 0.16));
+  border-right: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.theme-doc-toc-desktop,
+.pagination-nav__link,
+.card,
+.theme-admonition,
+.theme-doc-markdown blockquote {
+  background: var(--doc-surface);
+  border: 1px solid var(--doc-border);
+  box-shadow: var(--doc-shadow);
+}
+
+.theme-doc-markdown blockquote {
+  border-left: 4px solid #fbbf24;
+}
+
+.theme-doc-breadcrumbs,
+.breadcrumbs__link {
+  color: rgba(191, 219, 254, 0.78);
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: rgba(99, 102, 241, 0.16);
+  color: #ffffff;
 }
 
 .theme-doc-markdown h1,
@@ -54,21 +166,48 @@ body {
 
 .theme-doc-markdown table {
   display: table;
+  overflow: hidden;
   width: 100%;
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #f0a66e;
-  --ifm-color-primary-dark: #ed9858;
-  --ifm-color-primary-darker: #eb914c;
-  --ifm-color-primary-darkest: #e2781b;
-  --ifm-color-primary-light: #f3b484;
-  --ifm-color-primary-lighter: #f5bb90;
-  --ifm-color-primary-lightest: #f8d0b3;
-  --ifm-background-color: #18110f;
-  --ifm-background-surface-color: #221714;
-  --ifm-navbar-background-color: rgba(24, 17, 15, 0.92);
-  --ifm-heading-color: #fff2ea;
-  --ifm-font-color-base: #edd8cb;
-  --docusaurus-highlighted-code-line-bg: rgba(240, 166, 110, 0.14);
+.theme-doc-markdown table th {
+  background: rgba(99, 102, 241, 0.18);
+  color: #ffffff;
+}
+
+.theme-doc-markdown table td,
+.theme-doc-markdown table th {
+  border-color: var(--doc-border);
+}
+
+.theme-doc-markdown img {
+  border-radius: 24px;
+  box-shadow: var(--doc-shadow);
+}
+
+.table-of-contents__link--active {
+  color: #fbbf24;
+}
+
+.pagination-nav__label {
+  color: #ffffff;
+}
+
+.pagination-nav__sublabel,
+.footer,
+.footer__copyright {
+  color: rgba(203, 213, 225, 0.74);
+}
+
+.footer {
+  background:
+    linear-gradient(180deg, rgba(9, 17, 31, 0.92), rgba(5, 10, 18, 1)),
+    linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(147, 51, 234, 0.12));
+  border-top: 1px solid var(--doc-border);
+}
+
+.theme-code-block,
+pre {
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow: var(--doc-shadow);
 }

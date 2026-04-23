@@ -1,21 +1,33 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
+  position: relative;
   overflow: hidden;
-  padding: 5rem 0 3rem;
+  padding: 5.5rem 0 4rem;
+}
+
+.heroGlow {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.32), transparent 28%),
+    radial-gradient(circle at 78% 18%, rgba(147, 51, 234, 0.22), transparent 22%),
+    radial-gradient(circle at 72% 72%, rgba(251, 191, 36, 0.14), transparent 22%);
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .heroGrid {
+  align-items: center;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.25rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  position: relative;
+}
+
+.heroCopy {
+  max-width: 42rem;
 }
 
 .eyebrow {
-  color: #8c4f2f;
+  color: #fbbf24;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.24em;
@@ -24,16 +36,17 @@
 }
 
 .heroTitle {
-  color: #24130d;
-  font-size: clamp(2.8rem, 5vw, 4.9rem);
-  line-height: 0.95;
+  color: #ffffff;
+  font-size: clamp(3rem, 6vw, 5.6rem);
+  letter-spacing: -0.05em;
+  line-height: 0.92;
   margin-bottom: 1rem;
 }
 
 .heroSubtitle {
-  color: #5b4135;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  color: rgba(226, 232, 240, 0.88);
+  font-size: 1.12rem;
+  line-height: 1.75;
   margin-bottom: 1.5rem;
   max-width: 44rem;
 }
@@ -46,8 +59,8 @@
 }
 
 .heroMeta {
-  color: #7a6358;
-  font-size: 0.94rem;
+  color: rgba(191, 219, 254, 0.72);
+  font-size: 0.95rem;
   margin-top: 1rem;
 }
 
@@ -58,23 +71,40 @@
 
 .heroPanelCard,
 .heroPanelCardMuted {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(140, 79, 47, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.16);
   border-radius: 28px;
-  box-shadow: 0 24px 60px rgba(85, 49, 28, 0.08);
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.32);
   padding: 1.35rem;
 }
 
 .heroPanelCard {
-  background: linear-gradient(180deg, rgba(255, 250, 244, 0.95), rgba(246, 233, 219, 0.88));
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.84)),
+    linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(147, 51, 234, 0.18));
 }
 
 .heroPanelCardMuted {
-  background: linear-gradient(180deg, rgba(61, 82, 77, 0.1), rgba(255, 255, 255, 0.85));
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.86));
+}
+
+.heroPanelTop {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 88px minmax(0, 1fr);
+  margin-bottom: 1rem;
+}
+
+.heroLogo {
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.32);
+  display: block;
+  width: 88px;
 }
 
 .panelLabel {
-  color: #6e5547;
+  color: rgba(251, 191, 36, 0.92);
   font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.22em;
@@ -86,68 +116,180 @@
   display: grid;
   gap: 0.65rem;
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: 1.2rem;
 }
 
 .panelBody {
-  color: #4d3a31;
-  line-height: 1.7;
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.panelList li {
+  color: rgba(248, 250, 252, 0.92);
+  line-height: 1.6;
+}
+
+.heroMetrics {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metricLabel {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.45rem;
+}
+
+.metricBody {
+  color: rgba(203, 213, 225, 0.82);
+  line-height: 1.65;
   margin: 0;
 }
 
 .sections {
-  padding: 1rem 0 4rem;
+  padding: 1rem 0 4.5rem;
+}
+
+.sectionIntro {
+  margin-bottom: 1.5rem;
+  max-width: 42rem;
+}
+
+.sectionEyebrow {
+  color: #fbbf24;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  margin: 0 0 0.7rem;
+  text-transform: uppercase;
+}
+
+.sectionHeading {
+  color: #ffffff;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  letter-spacing: -0.04em;
+  margin-bottom: 0.8rem;
+}
+
+.sectionLead {
+  color: rgba(203, 213, 225, 0.82);
+  line-height: 1.75;
+  margin: 0;
 }
 
 .sectionGrid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.sectionCard,
-.sectionCardAccent {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(140, 79, 47, 0.1);
+.sectionCard {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.78)),
+    linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(147, 51, 234, 0.1));
+  border: 1px solid rgba(148, 163, 184, 0.16);
   border-radius: 28px;
+  box-shadow: 0 28px 70px rgba(2, 6, 23, 0.24);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   padding: 1.5rem;
 }
 
-.sectionCardAccent {
-  background: linear-gradient(180deg, rgba(247, 233, 217, 0.9), rgba(255, 255, 255, 0.9));
+.sectionHeader {
+  align-items: baseline;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
 }
 
 .sectionTag {
-  color: #8c4f2f;
+  color: #a5b4fc;
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.18em;
-  margin-bottom: 0.7rem;
+  margin: 0;
   text-transform: uppercase;
 }
 
+.sectionStat {
+  color: rgba(251, 191, 36, 0.82);
+  font-size: 0.82rem;
+  margin: 0;
+  text-align: right;
+}
+
 .sectionTitle {
-  font-size: 1.45rem;
+  color: #ffffff;
+  font-size: 1.55rem;
   margin-bottom: 0.75rem;
 }
 
 .sectionCopy {
-  color: #634d42;
+  color: rgba(203, 213, 225, 0.82);
+  flex: 1;
   line-height: 1.7;
 }
 
-.primaryCtaInline {
-  display: inline-flex;
-  margin: 0 auto 3rem;
+.sectionLink {
+  font-weight: 700;
+}
+
+.closingBand {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.82)),
+    linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(99, 102, 241, 0.14));
+  border: 1px solid rgba(251, 191, 36, 0.18);
+  border-radius: 30px;
+  box-shadow: 0 34px 90px rgba(2, 6, 23, 0.28);
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: 1.25rem;
+  padding: 1.7rem;
+}
+
+.closingTitle {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  letter-spacing: -0.04em;
+  margin-bottom: 0.65rem;
+}
+
+.closingCopy {
+  color: rgba(226, 232, 240, 0.8);
+  line-height: 1.7;
+  margin: 0;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 3rem 0 2rem;
+    padding: 3.5rem 0 2.5rem;
   }
 
   .heroGrid,
-  .sectionGrid {
+  .sectionGrid,
+  .closingBand {
+    grid-template-columns: 1fr;
+  }
+
+  .heroMetrics {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .heroPanelTop {
     grid-template-columns: 1fr;
   }
 }
