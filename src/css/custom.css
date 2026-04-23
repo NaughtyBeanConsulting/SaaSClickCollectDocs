@@ -1,0 +1,74 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #8c4f2f;
+  --ifm-color-primary-dark: #7e472a;
+  --ifm-color-primary-darker: #774227;
+  --ifm-color-primary-darkest: #633720;
+  --ifm-color-primary-light: #995a35;
+  --ifm-color-primary-lighter: #a16139;
+  --ifm-color-primary-lightest: #b87247;
+  --ifm-background-color: #fffaf2;
+  --ifm-background-surface-color: #fffdf9;
+  --ifm-navbar-background-color: rgba(255, 250, 242, 0.92);
+  --ifm-footer-background-color: #261812;
+  --ifm-heading-color: #24130d;
+  --ifm-font-color-base: #443027;
+  --ifm-link-color: #8c4f2f;
+  --ifm-link-hover-color: #633720;
+  --ifm-code-font-size: 95%;
+  --ifm-global-radius: 20px;
+  --docusaurus-highlighted-code-line-bg: rgba(140, 79, 47, 0.08);
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(230, 191, 160, 0.28), transparent 28%),
+    radial-gradient(circle at top right, rgba(61, 82, 77, 0.12), transparent 24%),
+    var(--ifm-background-color);
+}
+
+body {
+  background: transparent;
+}
+
+.navbar {
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(140, 79, 47, 0.08);
+}
+
+.footer {
+  color: rgba(255, 248, 240, 0.82);
+}
+
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3 {
+  letter-spacing: -0.03em;
+}
+
+.theme-doc-markdown table {
+  display: table;
+  width: 100%;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #f0a66e;
+  --ifm-color-primary-dark: #ed9858;
+  --ifm-color-primary-darker: #eb914c;
+  --ifm-color-primary-darkest: #e2781b;
+  --ifm-color-primary-light: #f3b484;
+  --ifm-color-primary-lighter: #f5bb90;
+  --ifm-color-primary-lightest: #f8d0b3;
+  --ifm-background-color: #18110f;
+  --ifm-background-surface-color: #221714;
+  --ifm-navbar-background-color: rgba(24, 17, 15, 0.92);
+  --ifm-heading-color: #fff2ea;
+  --ifm-font-color-base: #edd8cb;
+  --docusaurus-highlighted-code-line-bg: rgba(240, 166, 110, 0.14);
+}

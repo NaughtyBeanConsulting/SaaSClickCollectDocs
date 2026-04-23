@@ -1,0 +1,108 @@
+---
+title: Team
+description: Manage portal access roles and assign people to locations.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Team
+
+Open the Team page at `https://clickcollect.coffee/portal/staff/` to manage access and location assignment.
+
+The current portal uses **people with roles**, not named team groups. If you are looking for “teams”, use the Team page to add each person and assign them to the right location or locations.
+
+## How roles work
+
+| Role | What the role can do |
+| --- | --- |
+| Owner | Full account access, including owner management |
+| Admin | Full portal access |
+| Manager | Orders plus categories, drinks, and extras |
+| Staff | Orders only |
+
+Owners and admins always have all-location visibility. Managers and staff can be assigned to specific locations.
+
+## Add a team member
+
+### 1. Open **Team** and review the current member list
+
+The page shows role badges, assigned locations, active state, and the current usage summary for billable team capacity.
+
+<ScreenshotPlaceholder
+  title="Team page overview"
+  pathHint="static/img/portal/team/01-team-overview.png"
+/>
+
+### 2. Select the add or edit action for a person
+
+Use the page action to open the member form. Existing records can also be opened with **Edit** from the list.
+
+<ScreenshotPlaceholder
+  title="Open add or edit team member form"
+  pathHint="static/img/portal/team/02-open-member-form.png"
+/>
+
+### 3. Complete the member form
+
+The form includes:
+
+- `Email`
+- `Full name`
+- `Role`
+- `Is active`
+- `Assigned locations`
+
+If the role is **Owner** or **Admin**, the page treats the person as an all-location user.
+
+<ScreenshotPlaceholder
+  title="Team member form fields"
+  pathHint="static/img/portal/team/03-member-form.png"
+/>
+
+## Assign a team member to a location
+
+### 4. Use **Assigned locations** for managers and staff
+
+The `Assigned locations` multi-select lets you attach a person to one or more branches.
+
+- Leave it blank only if the page allows the person to work across all locations.
+- Owners and admins are treated as all-location users automatically.
+
+<ScreenshotPlaceholder
+  title="Assigned locations selector"
+  pathHint="static/img/portal/team/04-assigned-locations.png"
+/>
+
+### 5. Save and verify the list view
+
+After saving, confirm the person now shows the correct:
+
+- Role badge
+- Assigned locations
+- Active badge
+
+<ScreenshotPlaceholder
+  title="Saved team member row"
+  pathHint="static/img/portal/team/05-saved-member.png"
+/>
+
+## Billing and ownership notes
+
+### 6. Watch for team-member billing prompts
+
+Adding an active non-owner can trigger billing if the account has no open team-member capacity left for the current cycle.
+
+### 7. Handle owner changes carefully
+
+Only the current owner can add, edit, or remove owner-level access.
+
+<ScreenshotPlaceholder
+  title="Team billing or owner-management state"
+  pathHint="static/img/portal/team/06-team-billing-or-owner-state.png"
+/>
+
+## Good practice
+
+- Give managers the minimum access they need instead of defaulting to admin.
+- Keep inactive people on inactive status instead of deleting them immediately if you still need their audit trail.
+- Recheck location assignment every time a branch opens, closes, or changes hours.

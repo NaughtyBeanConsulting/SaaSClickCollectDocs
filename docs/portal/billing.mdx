@@ -1,0 +1,140 @@
+---
+title: Billing
+description: Understand the recurring total, add a card, manage add-ons, and review invoices.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Billing
+
+Open the Billing page at `https://clickcollect.coffee/portal/billing/` to review your subscription, payment method, usage, invoices, and statements.
+
+## What this page covers
+
+- Card setup and card replacement
+- Recurring monthly total and next billing date
+- Product, team-member, and location usage
+- Add-on charges and scheduled reductions
+- Invoices and billing statements
+
+## How billing works
+
+The page combines your base plan with any active add-ons. Add-ons are tied to the resources you are using beyond the included plan capacity.
+
+- Products can trigger extra product blocks.
+- Team members can trigger extra team-member blocks.
+- Locations can trigger extra location blocks.
+
+If you still have open paid capacity in the current billing period, the next item you add uses that already-paid slot before creating another charge.
+
+## Add or update your card
+
+### 1. Open **Billing** and review the **Payment Method** card
+
+If a card is already active, the card brand and last four digits appear here. If not, you will see the setup action instead.
+
+<ScreenshotPlaceholder
+  title="Billing page overview"
+  pathHint="static/img/portal/billing/01-billing-overview.png"
+/>
+
+### 2. Select **Add Card Details** or **Update Card Details**
+
+Use **Add Card Details** for first-time setup and **Update Card Details** when you need to replace the current card.
+
+<ScreenshotPlaceholder
+  title="Payment method card actions"
+  pathHint="static/img/portal/billing/02-payment-method-actions.png"
+/>
+
+### 3. Complete the payment setup flow
+
+Finish the hosted card setup and return to the Billing page. Once the card is active, the payment method card updates with the saved card details.
+
+<ScreenshotPlaceholder
+  title="Hosted card setup return state"
+  pathHint="static/img/portal/billing/03-card-setup-complete.png"
+/>
+
+## Understand your recurring total
+
+### 4. Review **Recurring Monthly Total**
+
+This card is your billing summary. Check:
+
+- Current monthly amount
+- Billing status badge
+- Next billing date
+- Estimated next payment
+- Trial or grace-period messaging if it applies
+- Billing lock warnings if an account is overdue
+
+<ScreenshotPlaceholder
+  title="Recurring monthly total card"
+  pathHint="static/img/portal/billing/04-recurring-total.png"
+/>
+
+## Understand add-ons and how to add them
+
+### 5. Review the **Current Usage Breakdown** cards
+
+There are separate cards for products, team members, and locations. Each card shows:
+
+- Included capacity
+- Current usage
+- Extra blocks in use
+- Monthly add-on total
+- Open paid capacity already available this cycle
+
+<ScreenshotPlaceholder
+  title="Usage breakdown cards"
+  pathHint="static/img/portal/billing/05-usage-breakdown.png"
+/>
+
+### 6. Add more products, team members, or locations from their own portal sections
+
+You do not normally add an add-on from the Billing page directly. Instead, the add-on is created when you perform the operational action that pushes usage over the included plan limit.
+
+Examples:
+
+- Adding more drinks in **Shop Manager** can trigger a product add-on.
+- Adding another active person in **Team** can trigger a team-member add-on.
+- Adding another branch in **Locations** can trigger a location add-on.
+
+If the account has no open capacity left, the portal shows a billing confirmation during that action.
+
+<ScreenshotPlaceholder
+  title="Usage card showing add-on impact"
+  pathHint="static/img/portal/billing/06-addon-logic.png"
+/>
+
+### 7. Reduce unused add-ons when the option appears
+
+If you have reducible blocks, the Billing page exposes a reduction action. Reductions are scheduled for the next billing date instead of cutting access immediately.
+
+Look for scheduled messages such as “Scheduled to stop renewing on …” on the relevant usage card.
+
+<ScreenshotPlaceholder
+  title="Scheduled add-on reduction state"
+  pathHint="static/img/portal/billing/07-scheduled-reduction.png"
+/>
+
+## Review invoices and statements
+
+### 8. Open the **Invoices & Statements** tab
+
+Use this tab to download individual invoices and review statement windows.
+
+- Invoices are listed individually.
+- Statements can be viewed by available window ranges.
+
+<ScreenshotPlaceholder
+  title="Invoices and statements tab"
+  pathHint="static/img/portal/billing/08-invoices-statements.png"
+/>
+
+## Good practice
+
+- Treat the monthly total card as the source of truth for your current recurring amount.
+- Check usage cards after adding products, people, or branches so you understand whether you consumed open capacity or created a new billable block.
+- Remove or deactivate unused operational items before billing day if you want the next cycle to renew lower.

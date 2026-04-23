@@ -1,0 +1,130 @@
+---
+title: Settings
+description: Update company profile details, payment integrations, VAT, and storefront policies.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Settings
+
+Open the Settings page at `https://clickcollect.coffee/portal/settings/` to manage company details, region-specific payment setup, VAT, and storefront policies.
+
+## What this page controls
+
+- Company profile details
+- Operating country and currency context
+- Enabled payment gateways and preferred gateway
+- Yoco webhook setup and management
+- VAT registration and tax number
+- Storefront content such as About Us, terms, privacy, and delivery instructions
+
+## Update the company profile
+
+### 1. Open **Settings** and start in **Company Profile**
+
+This section is where business identity and invoice-facing information lives.
+
+<ScreenshotPlaceholder
+  title="Settings page overview"
+  pathHint="static/img/portal/settings/01-settings-overview.png"
+/>
+
+### 2. Complete the company profile fields
+
+Work through these fields in order:
+
+- `Operating country`
+- `Shop name`
+- `WhatsApp number`
+- `Company email`
+- `Invoice prefix`
+- `Company address`
+- `VAT / Tax number`
+
+The operating country drives the currency and the payment-gateway guidance shown further down the page.
+
+<ScreenshotPlaceholder
+  title="Company profile fields"
+  pathHint="static/img/portal/settings/02-company-profile.png"
+/>
+
+## Set up payment integrations
+
+### 3. Open **Storefront Payments**
+
+The payment section shows the market-specific guidance for the selected country and lets you choose which gateways are enabled.
+
+<ScreenshotPlaceholder
+  title="Storefront payments section"
+  pathHint="static/img/portal/settings/03-storefront-payments.png"
+/>
+
+### 4. Enable the gateways you want to offer
+
+The current portal supports market-aware gateway options including:
+
+- `Yoco`
+- `PayFast`
+- `Ikhokha`
+
+Use the checkboxes to enable the gateways that fit your market, then select the preferred online payment gateway.
+
+<ScreenshotPlaceholder
+  title="Enabled gateways and preferred gateway"
+  pathHint="static/img/portal/settings/04-gateway-selection.png"
+/>
+
+### 5. Complete gateway-specific setup details
+
+For Yoco, the page supports secret-key entry, webhook-secret generation, webhook listing, and webhook deletion. The page also exposes generated callback URLs so you can complete the provider-side setup cleanly.
+
+<ScreenshotPlaceholder
+  title="Gateway-specific setup and callback URLs"
+  pathHint="static/img/portal/settings/05-gateway-setup-details.png"
+/>
+
+## Set up VAT
+
+### 6. Toggle VAT registration and enter the tax number
+
+If the business is VAT registered, enable the VAT option and complete the tax-number field. This keeps invoice and tax-facing business details aligned.
+
+<ScreenshotPlaceholder
+  title="VAT registration controls"
+  pathHint="static/img/portal/settings/06-vat-controls.png"
+/>
+
+## Set storefront policies
+
+### 7. Open **Storefront Policies** and complete the content editors
+
+The policy area is where you maintain storefront-facing text such as:
+
+- About us
+- Terms and conditions
+- Privacy policy
+- Delivery instructions
+- Allergen warnings
+
+These entries feed the storefront policy experience and supporting content pages.
+
+<ScreenshotPlaceholder
+  title="Storefront policies editors"
+  pathHint="static/img/portal/settings/07-storefront-policies.png"
+/>
+
+### 8. Save and verify the policy content on the storefront
+
+After updating the policy text, confirm the copy is correct from the storefront side as well as the portal side.
+
+<ScreenshotPlaceholder
+  title="Saved storefront policies"
+  pathHint="static/img/portal/settings/08-saved-policies.png"
+/>
+
+## Good practice
+
+- Set the operating country first so the rest of the payment guidance matches your market.
+- Keep the invoice prefix stable once you begin issuing invoices.
+- Regenerate and document webhook details carefully when changing payment credentials.
+- Review policy copy regularly so storefront information stays accurate.

@@ -1,0 +1,153 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  overflow: hidden;
+  padding: 5rem 0 3rem;
+}
+
+.heroGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.eyebrow {
+  color: #8c4f2f;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  color: #24130d;
+  font-size: clamp(2.8rem, 5vw, 4.9rem);
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  color: #5b4135;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 44rem;
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.heroMeta {
+  color: #7a6358;
+  font-size: 0.94rem;
+  margin-top: 1rem;
+}
+
+.heroPanel {
+  display: grid;
+  gap: 1rem;
+}
+
+.heroPanelCard,
+.heroPanelCardMuted {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(140, 79, 47, 0.1);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(85, 49, 28, 0.08);
+  padding: 1.35rem;
+}
+
+.heroPanelCard {
+  background: linear-gradient(180deg, rgba(255, 250, 244, 0.95), rgba(246, 233, 219, 0.88));
+}
+
+.heroPanelCardMuted {
+  background: linear-gradient(180deg, rgba(61, 82, 77, 0.1), rgba(255, 255, 255, 0.85));
+}
+
+.panelLabel {
+  color: #6e5547;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+}
+
+.panelList {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.panelBody {
+  color: #4d3a31;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.sections {
+  padding: 1rem 0 4rem;
+}
+
+.sectionGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sectionCard,
+.sectionCardAccent {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(140, 79, 47, 0.1);
+  border-radius: 28px;
+  padding: 1.5rem;
+}
+
+.sectionCardAccent {
+  background: linear-gradient(180deg, rgba(247, 233, 217, 0.9), rgba(255, 255, 255, 0.9));
+}
+
+.sectionTag {
+  color: #8c4f2f;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  font-size: 1.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.sectionCopy {
+  color: #634d42;
+  line-height: 1.7;
+}
+
+.primaryCtaInline {
+  display: inline-flex;
+  margin: 0 auto 3rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 0 2rem;
+  }
+
+  .heroGrid,
+  .sectionGrid {
+    grid-template-columns: 1fr;
+  }
+}

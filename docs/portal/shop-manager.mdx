@@ -1,0 +1,155 @@
+---
+title: Shop Manager
+description: Work the live order queue and manage categories, extras, drinks, and product add-ons.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Shop Manager
+
+Open Shop Manager at `https://clickcollect.coffee/portal/manage/` to run the order queue and manage menu content.
+
+## What is inside Shop Manager
+
+- `Orders`
+- `Categories`
+- `Extras`
+- `Drinks`
+- `Settings` for higher-access roles
+
+Staff can work the order queue only. Managers can also manage categories, extras, and drinks. Owners and admins get the full set of tools.
+
+## Card view vs table view
+
+### 1. Open the **Orders** tab and choose the view mode
+
+The live orders area exposes two toggle buttons:
+
+- **Table View** for a denser operational view across many orders
+- **Card View** for a more visual, easier-to-scan layout
+
+Use table view when you want to compare many rows quickly. Use card view when you are scanning fewer orders or working on a smaller screen.
+
+<ScreenshotPlaceholder
+  title="Orders tab view toggle"
+  pathHint="static/img/portal/shop-manager/01-orders-view-toggle.png"
+/>
+
+## Change order status from pending to collected
+
+### 2. Start with the order in **Pending**
+
+New queue items appear with a `Pending` state.
+
+<ScreenshotPlaceholder
+  title="Pending order state"
+  pathHint="static/img/portal/shop-manager/02-pending-order.png"
+/>
+
+### 3. Change the status to **In Progress**
+
+Use the order status selector on the row or card to move the order from `Pending` to `In Progress` once preparation starts.
+
+<ScreenshotPlaceholder
+  title="Order status moved to In Progress"
+  pathHint="static/img/portal/shop-manager/03-in-progress-order.png"
+/>
+
+### 4. Change the status to **Completed**
+
+Move the order to `Completed` when the order is ready for pickup.
+
+<ScreenshotPlaceholder
+  title="Order status moved to Completed"
+  pathHint="static/img/portal/shop-manager/04-completed-order.png"
+/>
+
+### 5. Change the status to **Collected**
+
+Use `Collected` when the customer has picked up the order. Collected orders move out of the live queue and into the collected bin.
+
+<ScreenshotPlaceholder
+  title="Order status moved to Collected"
+  pathHint="static/img/portal/shop-manager/05-collected-order.png"
+/>
+
+### 6. Review the **Collected Bin**
+
+Collected orders are still available, but they sit behind the collected bin toggle instead of crowding the active queue.
+
+<ScreenshotPlaceholder
+  title="Collected bin"
+  pathHint="static/img/portal/shop-manager/06-collected-bin.png"
+/>
+
+## Add categories
+
+### 7. Open the **Categories** tab and add a category
+
+Create the category structure first so drinks have a clean home in the storefront.
+
+Typical categories include `Espresso Drinks`, `Cold Drinks`, or `Seasonal Specials`.
+
+<ScreenshotPlaceholder
+  title="Categories tab and add form"
+  pathHint="static/img/portal/shop-manager/07-categories.png"
+/>
+
+## Add extras
+
+### 8. Open the **Extras** tab and create add-ons
+
+Extras are the modifiers you want to attach to drinks, such as an extra shot or a milk change.
+
+Add the extra name, price, and active state, then save it.
+
+<ScreenshotPlaceholder
+  title="Extras tab and add form"
+  pathHint="static/img/portal/shop-manager/08-extras.png"
+/>
+
+## Add drinks
+
+### 9. Open the **Drinks** tab and add a drink
+
+Work through the drink form with:
+
+- Name
+- Description
+- Category
+- Base price
+- Any size adjustments
+- Image
+- Active state
+
+If the account has no open product capacity left, saving another product can trigger a billing confirmation.
+
+<ScreenshotPlaceholder
+  title="Drinks tab and add form"
+  pathHint="static/img/portal/shop-manager/09-drinks.png"
+/>
+
+## Assign extras to drinks
+
+### 10. Edit the drink and attach extras from the available list
+
+Once the extras already exist, return to the drink form and assign the relevant extras to that drink.
+
+This is the normal sequence:
+
+1. Create the category.
+2. Create the extra.
+3. Create or edit the drink.
+4. Assign extras to the drink.
+
+<ScreenshotPlaceholder
+  title="Assign extras to a drink"
+  pathHint="static/img/portal/shop-manager/10-assign-extras.png"
+/>
+
+## Good practice
+
+- Build categories before you build drinks.
+- Add extras once, then reuse them across drinks.
+- Use table view for busy shifts and card view for a more visual queue scan.
+- Push orders all the way to `Collected` so the active queue stays useful.

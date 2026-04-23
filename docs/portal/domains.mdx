@@ -1,0 +1,95 @@
+---
+title: Domains
+description: Add and verify custom storefront domains, attach subdomains, and provision storefront hosting.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Domains
+
+Open the Domains page at `https://clickcollect.coffee/portal/domains/` to manage customer-facing storefront domains. Portal access stays on the main ClickCollect domain.
+
+## Add a domain
+
+### 1. Open **Domains** and review your current domain cards
+
+The page shows each domain with status, type, and any remaining setup steps.
+
+<ScreenshotPlaceholder
+  title="Domains page overview"
+  pathHint="static/img/portal/domains/01-domains-overview.png"
+/>
+
+### 2. Add the base custom domain
+
+Use the add-domain action and enter the custom domain you want to use for the storefront.
+
+If the current plan does not allow another custom domain or the account has no open domain capacity left, the page can enforce the plan rule or billing rule at this point.
+
+<ScreenshotPlaceholder
+  title="Add domain form"
+  pathHint="static/img/portal/domains/02-add-domain-form.png"
+/>
+
+### 3. Create the TXT verification record shown on the domain card
+
+For a new custom domain, the page shows a TXT host and TXT value. Create the DNS record exactly as shown.
+
+<ScreenshotPlaceholder
+  title="TXT verification instructions"
+  pathHint="static/img/portal/domains/03-txt-verification.png"
+/>
+
+### 4. Return and use **Verify now**
+
+Once DNS has propagated, use **Verify now**. If the token needs to be replaced, the page also offers **Regenerate TXT**.
+
+<ScreenshotPlaceholder
+  title="Verify domain action"
+  pathHint="static/img/portal/domains/04-verify-domain.png"
+/>
+
+### 5. Add the storefront subdomain
+
+After the base domain is verified, the page prompts for a storefront subdomain label such as `shop`. That creates the full customer-facing host name.
+
+<ScreenshotPlaceholder
+  title="Add storefront subdomain"
+  pathHint="static/img/portal/domains/05-add-subdomain.png"
+/>
+
+### 6. Create the CNAME record shown by the page
+
+After the subdomain is attached, copy the CNAME target and configure it in DNS.
+
+<ScreenshotPlaceholder
+  title="CNAME setup instructions"
+  pathHint="static/img/portal/domains/06-cname-setup.png"
+/>
+
+### 7. Run or review storefront provisioning
+
+If storefront setup is still pending, use **Run storefront setup** when the action is available. The page tracks provisioning states for site creation, rewrite rules, SSL, reverse proxy, and redirect work.
+
+<ScreenshotPlaceholder
+  title="Storefront setup checklist"
+  pathHint="static/img/portal/domains/07-storefront-setup.png"
+/>
+
+## Remove a domain
+
+### 8. Use **Delete domain** only when you are sure the storefront should be removed
+
+The page attempts environment cleanup before deleting the database record. If infrastructure cleanup fails, you can still receive an error message instead of a silent delete.
+
+<ScreenshotPlaceholder
+  title="Delete domain action"
+  pathHint="static/img/portal/domains/08-delete-domain.png"
+/>
+
+## Good practice
+
+- Verify the base domain before trying to attach the storefront subdomain.
+- Copy the TXT and CNAME values exactly.
+- Wait for DNS to propagate before retrying verification.
+- Keep only one verified custom storefront domain active unless your plan and workflow require more.
