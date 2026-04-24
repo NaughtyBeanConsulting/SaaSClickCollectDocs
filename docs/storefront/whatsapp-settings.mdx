@@ -1,0 +1,102 @@
+---
+title: WhatsApp Settings
+description: Manage the signed-in customer settings page for WhatsApp, location, and payment preferences.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# WhatsApp settings
+
+The customer settings page lives at `/whatsapp-settings/` and requires sign-in. Despite the route name, it covers more than just WhatsApp: it is the main customer settings surface for preferred pickup location, default payment gateway, WhatsApp number, and saved payment methods where supported.
+
+## What this flow covers
+
+- Opening the customer settings page
+- Understanding the sign-in requirement
+- Updating the WhatsApp number
+- Choosing preferred pickup and payment defaults
+- Managing saved payment details where supported
+
+## Open the settings page
+
+### 1. Use the **Settings** item in the storefront navigation
+
+The customer-facing navigation exposes **Settings** as a bottom-nav destination.
+
+<ScreenshotPlaceholder
+  title="Storefront settings nav item"
+  pathHint="static/img/storefront/whatsapp-settings/placeholder.svg"
+/>
+
+### 2. Sign in if prompted
+
+If the customer is not authenticated, the route first shows the Google sign-in page.
+
+<ScreenshotPlaceholder
+  title="Settings route sign-in requirement"
+  pathHint="static/img/storefront/whatsapp-settings/placeholder.svg"
+/>
+
+### 3. Open the **Customer Settings** page after sign-in
+
+The page headline explains that customers can manage preferred pickup location, default payment gateway, WhatsApp number, and saved payment card details when supported.
+
+<ScreenshotPlaceholder
+  title="Customer settings overview"
+  pathHint="static/img/storefront/whatsapp-settings/placeholder.svg"
+/>
+
+## Update WhatsApp details
+
+### 4. Review the WhatsApp number field
+
+Use the saved profile number here when the customer wants pickup updates tied to their account.
+
+<ScreenshotPlaceholder
+  title="WhatsApp number setting"
+  pathHint="static/img/storefront/whatsapp-settings/placeholder.svg"
+/>
+
+### 5. Save the updated WhatsApp number
+
+Use a full international-format number where required so the storefront can use it consistently in WhatsApp flows.
+
+<ScreenshotPlaceholder
+  title="Save WhatsApp number changes"
+  pathHint="static/img/storefront/whatsapp-settings/placeholder.svg"
+/>
+
+## Update customer preferences
+
+### 6. Choose the preferred pickup location
+
+The settings flow can save a default collection location so future checkouts are faster.
+
+<ScreenshotPlaceholder
+  title="Preferred collection location setting"
+  pathHint="static/img/storefront/whatsapp-settings/placeholder.svg"
+/>
+
+### 7. Review the default payment gateway choice
+
+If the storefront offers multiple supported gateways, this page can persist the customer default for faster future checkout.
+
+<ScreenshotPlaceholder
+  title="Default payment gateway setting"
+  pathHint="static/img/storefront/whatsapp-settings/placeholder.svg"
+/>
+
+### 8. Review saved card controls when available
+
+When Stripe or PayFast saved-card settings are enabled, the page can expose saved payment management controls.
+
+<ScreenshotPlaceholder
+  title="Saved card management state"
+  pathHint="static/img/storefront/whatsapp-settings/placeholder.svg"
+/>
+
+## Good practice
+
+- Treat this page as the signed-in customer profile surface, not only a WhatsApp page.
+- Use the same WhatsApp number here that was used during guest checkout if the customer wants to link older orders later.
+- Capture separate screenshots for signed-out redirect, signed-in overview, and saved-card states because they are different experiences.

@@ -1,0 +1,111 @@
+---
+title: WhatsApp Notifications
+description: Understand the WhatsApp order-update and order-linking flows in the storefront.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# WhatsApp notifications
+
+WhatsApp is a major part of the storefront fulfillment experience. It is used for first-order updates, order-state messaging, and later linking eligible guest orders into a signed-in customer account.
+
+## What this flow covers
+
+- The first WhatsApp update after checkout
+- The success-page message preview
+- What happens when the customer signs in later
+- Linking guest orders by WhatsApp verification
+- Order-history prompts for customers who do not yet have a saved WhatsApp number
+
+## Initial order updates
+
+### 1. Complete checkout with a WhatsApp-capable number
+
+The storefront prefers a WhatsApp or phone number during guest checkout because that number can be used for pickup updates.
+
+<ScreenshotPlaceholder
+  title="Checkout with WhatsApp-capable customer number"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+### 2. Review the success-page WhatsApp preview
+
+After order creation, the success page shows a preview of the message shape used for the first order update.
+
+<ScreenshotPlaceholder
+  title="Order success WhatsApp preview"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+### 3. Confirm the customer-facing update state
+
+The platform can show toast or confirmation messaging indicating that WhatsApp updates are on the way, or warn when the first customer message could not be sent.
+
+<ScreenshotPlaceholder
+  title="WhatsApp delivery confirmation or warning"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+## Link guest orders after sign-in
+
+### 4. Open **Orders** after signing in
+
+When a signed-in customer is missing a saved WhatsApp number, the orders page can show a **Link my WhatsApp orders** prompt.
+
+<ScreenshotPlaceholder
+  title="Orders page WhatsApp-link prompt"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+### 5. Open **Link my WhatsApp orders**
+
+This flow verifies the number used during guest checkout and attaches matching eligible guest orders to the signed-in account.
+
+<ScreenshotPlaceholder
+  title="Link my WhatsApp orders page"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+### 6. Enter the same mobile number used during guest checkout
+
+The linking page tells the customer to use the same number they used for guest checkout or WhatsApp claim.
+
+<ScreenshotPlaceholder
+  title="Enter WhatsApp number for order linking"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+### 7. Send and enter the WhatsApp verification code
+
+The flow sends a one-time code to WhatsApp and then verifies it before linking the matching orders.
+
+<ScreenshotPlaceholder
+  title="Send and verify WhatsApp code"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+## Link directly from the guest order success flow
+
+### 8. Review post-checkout guest linking actions
+
+Guest orders can expose a direct next step to create an account or link to an existing account after checkout.
+
+<ScreenshotPlaceholder
+  title="Guest order account-link choices"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+### 9. Use the WhatsApp claim flow when prompted
+
+If the storefront uses the guest WhatsApp claim flow, it sends a one-time code to the WhatsApp number captured during guest checkout and then links the order to the right profile.
+
+<ScreenshotPlaceholder
+  title="Guest order WhatsApp claim page"
+  pathHint="static/img/storefront/whatsapp-notifications/placeholder.svg"
+/>
+
+## What the customer should expect
+
+- The original order still succeeds even if the customer skips account linking.
+- Linking is about future convenience and order history, not making the current order valid.
+- Using the same WhatsApp number across guest checkout and account settings makes order history much easier to connect.

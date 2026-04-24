@@ -1,0 +1,87 @@
+---
+title: Account Linking
+description: Explain how guest orders can be linked to a customer account after checkout.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Account linking after guest checkout
+
+Guest checkout is intentionally low-friction, but the storefront still provides a path to turn that guest order into a reusable customer account. This flow is important because it keeps first-order conversion high without sacrificing future repeat-order convenience.
+
+## What this flow covers
+
+- The post-checkout account-linking options shown to guest customers
+- Creating or linking an account after a guest order
+- WhatsApp verification for guest-order claiming
+- Skipping linking without breaking the current order
+
+## Start from the order-created page
+
+### 1. Complete a guest checkout successfully
+
+The account-linking options appear after the guest order has already been created.
+
+<ScreenshotPlaceholder
+  title="Guest checkout success state before linking"
+  pathHint="static/img/storefront/account-linking/placeholder.svg"
+/>
+
+### 2. Review the guest follow-up options
+
+The success page can offer actions such as:
+
+- Create account
+- Link to existing account
+- Skip for now
+
+These are optional convenience flows, not requirements for the current order.
+
+<ScreenshotPlaceholder
+  title="Guest order account-linking choices"
+  pathHint="static/img/storefront/account-linking/placeholder.svg"
+/>
+
+## Link by WhatsApp verification
+
+### 3. Open the WhatsApp claim flow
+
+When the storefront uses WhatsApp-based claim logic, it sends a one-time code to the number captured during guest checkout.
+
+<ScreenshotPlaceholder
+  title="WhatsApp claim flow entry"
+  pathHint="static/img/storefront/account-linking/placeholder.svg"
+/>
+
+### 4. Send the WhatsApp verification code
+
+The flow uses the guest checkout number as the proof point for attaching the order to the right customer profile.
+
+<ScreenshotPlaceholder
+  title="Send WhatsApp claim code"
+  pathHint="static/img/storefront/account-linking/placeholder.svg"
+/>
+
+### 5. Enter the verification code and complete linking
+
+Once the code is verified, eligible guest orders can be attached to a newly created or existing signed-in account.
+
+<ScreenshotPlaceholder
+  title="Verify WhatsApp code and link account"
+  pathHint="static/img/storefront/account-linking/placeholder.svg"
+/>
+
+### 6. Confirm the customer can still skip linking
+
+The storefront should make it clear that skipping account linking does not invalidate the order or stop the customer from receiving the current order updates.
+
+<ScreenshotPlaceholder
+  title="Skip account linking without blocking the order"
+  pathHint="static/img/storefront/account-linking/placeholder.svg"
+/>
+
+## Good practice
+
+- Explain this flow as a retention path, not a checkout dependency.
+- Keep the screenshots separate from the main checkout guide so the optional nature of the flow stays obvious.
+- Use the same WhatsApp number across guest checkout and later sign-in if the customer wants the cleanest history merge.

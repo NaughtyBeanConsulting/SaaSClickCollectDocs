@@ -1,0 +1,150 @@
+---
+title: Guest Checkout
+description: Place a pickup order without creating an account.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Guest checkout
+
+Use this guide when a customer wants to place a pickup order without signing in. The reference storefront clearly presents guest checkout on the cart page so first-time customers can order without hitting an account wall.
+
+## What this flow covers
+
+- Starting from the public storefront menu
+- Adding products to the cart
+- Choosing **Continue as guest**
+- Entering customer contact details
+- Selecting a collection location and pickup time
+- Continuing to payment
+
+## Start from the menu
+
+### 1. Open the storefront homepage
+
+Use the public storefront URL, for example `https://nbc.clickcollect.coffee/`.
+
+The homepage presents the hero section, category filters, product cards, and an **Add to cart** action on each sellable item.
+
+<ScreenshotPlaceholder
+  title="Storefront menu landing page"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+### 2. Add a product to the cart
+
+Select **Add to cart** on the chosen drink or item. Repeat as needed until the cart contains the intended order.
+
+<ScreenshotPlaceholder
+  title="Product card with add-to-cart action"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+### 3. Open the cart
+
+Use the bottom navigation or cart shortcut to move into the cart view.
+
+On the reference storefront, the cart page is where guest checkout begins.
+
+<ScreenshotPlaceholder
+  title="Cart entry point from storefront navigation"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+## Continue as a guest
+
+### 4. Review the guest and sign-in options
+
+When the customer is not signed in, the cart shows two clear choices:
+
+- **Continue as guest**
+- **Sign in**
+
+The guest option is meant for pickup orders that do not need an existing account.
+
+<ScreenshotPlaceholder
+  title="Guest checkout and sign-in options"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+### 5. Choose **Continue as guest**
+
+Use **Continue as guest** to keep the order moving without Google authentication.
+
+The customer can still provide enough information for payment, fulfillment, and updates.
+
+<ScreenshotPlaceholder
+  title="Continue as guest action"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+## Capture guest checkout details
+
+### 6. Enter **Customer Name**
+
+The guest flow requires a customer name so the order can be identified during collection.
+
+<ScreenshotPlaceholder
+  title="Guest customer name field"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+### 7. Enter **WhatsApp or Phone**
+
+The storefront prefers a WhatsApp-capable phone number because pickup updates are sent there when available.
+
+If the customer does not want to sign in, this field is the strongest link between the order and future WhatsApp notifications or later order claiming.
+
+<ScreenshotPlaceholder
+  title="Guest WhatsApp or phone field"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+### 8. Add email if available
+
+Email supports contact capture and later account-linking flows, but the key requirement is at least one contact method.
+
+<ScreenshotPlaceholder
+  title="Guest email field"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+### 9. Select the collection location
+
+The cart shows the active collection location card, address, and a link to **Open Google Maps**.
+
+Customers can confirm where they will collect the order before paying.
+
+<ScreenshotPlaceholder
+  title="Collection location card"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+### 10. Decide whether to remember the location on this device
+
+The guest flow can remember the chosen location locally on the device to speed up repeat guest checkout later.
+
+<ScreenshotPlaceholder
+  title="Remember guest location option"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+### 11. Choose pickup timing
+
+The cart supports:
+
+- **ASAP**
+- Scheduled pickup
+
+The ready time is shown in the cart before payment.
+
+<ScreenshotPlaceholder
+  title="Pickup timing selector"
+  pathHint="static/img/storefront/guest-checkout/placeholder.svg"
+/>
+
+## Good practice
+
+- Use a real WhatsApp-capable number if the customer wants order updates.
+- Keep the collection location accurate because it is saved onto the order snapshot.
+- If the customer expects repeat ordering and order history, direct them to sign in instead of staying a guest.

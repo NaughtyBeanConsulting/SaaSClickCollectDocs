@@ -1,0 +1,103 @@
+---
+title: Sign In
+description: Use Google sign-in for order history, faster repeat orders, and customer settings.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Sign in
+
+The reference storefront uses Google-only sign-in for authenticated customer access. Customers do not need to sign in to place a guest pickup order, but they do need it for account-linked order history, settings, and future convenience features.
+
+## What this flow covers
+
+- Signing in from the cart or orders page
+- Understanding the Google-only sign-in prompt
+- Returning to orders, checkout, or settings after authentication
+- Knowing when to sign in instead of staying a guest
+
+## Open a sign-in entry point
+
+### 1. Open the cart or orders page while signed out
+
+Two common sign-in entry points are:
+
+- `Cart` when a customer wants faster repeat checkout
+- `Orders` when a customer wants order history
+
+<ScreenshotPlaceholder
+  title="Signed-out orders or cart entry point"
+  pathHint="static/img/storefront/sign-in/placeholder.svg"
+/>
+
+### 2. Choose **Sign in**
+
+From the cart, the sign-in option sits next to **Continue as guest**. From the orders page, sign-in is required before history can load.
+
+<ScreenshotPlaceholder
+  title="Sign in action from cart or orders"
+  pathHint="static/img/storefront/sign-in/placeholder.svg"
+/>
+
+## Complete Google sign-in
+
+### 3. Review the sign-in page copy
+
+The storefront sign-in page explains that Google is used to access orders and checkout.
+
+The page also states that Google-only sign-in is enabled for the site.
+
+<ScreenshotPlaceholder
+  title="Google-only sign-in page"
+  pathHint="static/img/storefront/sign-in/placeholder.svg"
+/>
+
+### 4. Select **Continue with Google**
+
+Use the Google button to authenticate. After a successful sign-in, the storefront returns the customer to the requested flow.
+
+Examples:
+
+- `/orders/` for order history
+- `/cart/` for faster checkout
+- `/whatsapp-settings/` for customer settings
+
+<ScreenshotPlaceholder
+  title="Continue with Google button"
+  pathHint="static/img/storefront/sign-in/placeholder.svg"
+/>
+
+### 5. Confirm the return path after sign-in
+
+After authentication, confirm that the customer lands back on the surface that triggered sign-in instead of being dropped onto an unrelated page.
+
+<ScreenshotPlaceholder
+  title="Post-sign-in return state"
+  pathHint="static/img/storefront/sign-in/placeholder.svg"
+/>
+
+## When sign-in is the better choice
+
+### 6. Use sign-in when the customer wants account-linked history
+
+Signed-in users can access order history and later link eligible guest orders into the same profile.
+
+<ScreenshotPlaceholder
+  title="Orders page after successful sign-in"
+  pathHint="static/img/storefront/sign-in/placeholder.svg"
+/>
+
+### 7. Use sign-in when the customer wants saved settings
+
+Customer settings such as WhatsApp number, preferred pickup location, and default payment gateway depend on an authenticated profile.
+
+<ScreenshotPlaceholder
+  title="Settings page after sign-in"
+  pathHint="static/img/storefront/sign-in/placeholder.svg"
+/>
+
+## Good practice
+
+- Keep guest checkout available for first-time customers who just want to order quickly.
+- Push sign-in when the customer wants repeat convenience or order history.
+- Test sign-in from both `/cart/` and `/orders/` because each path should return cleanly after Google authentication.

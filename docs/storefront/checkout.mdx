@@ -1,0 +1,126 @@
+---
+title: Checkout
+description: Complete the storefront checkout with contact details, pickup timing, and payment.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Checkout
+
+In the current storefront, checkout happens inside the cart surface. That means the customer reviews the order, enters guest details or uses their signed-in profile, selects a collection location and pickup time, and then continues into payment.
+
+## What this flow covers
+
+- Reviewing cart contents and totals
+- Confirming contact details
+- Selecting collection location and pickup timing
+- Reviewing payment method availability
+- Completing payment and reaching the order-created page
+
+## Review the cart before payment
+
+### 1. Open the cart with items already added
+
+The cart shows item count, total, and the active checkout form state.
+
+<ScreenshotPlaceholder
+  title="Cart with line items and totals"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+### 2. Confirm the checkout contact section
+
+For guests, the cart displays contact fields directly in the checkout flow. For signed-in customers, profile-linked information may already be present.
+
+<ScreenshotPlaceholder
+  title="Checkout contact details section"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+## Confirm collection details
+
+### 3. Review the collection-location card
+
+The checkout flow uses the selected collection location as part of the order snapshot.
+
+Customers should verify the branch name, address, and map link before completing payment.
+
+<ScreenshotPlaceholder
+  title="Checkout collection location review"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+### 4. Choose **ASAP** or schedule pickup
+
+The pickup selector exposes immediate and scheduled collection windows. The ready time shown here carries forward into the order summary and update messages.
+
+<ScreenshotPlaceholder
+  title="ASAP and scheduled pickup options"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+## Confirm payment
+
+### 5. Review the **Payment Method** panel
+
+The cart shows whether checkout is available and which gateway is active.
+
+On the reference storefront, payment messaging includes Yoco support and wallet-friendly methods like Apple Pay and Google Pay where available.
+
+<ScreenshotPlaceholder
+  title="Payment method panel"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+### 6. Watch for checkout-blocked messaging
+
+If the cart is empty or the order cannot proceed, the checkout area explains why payment is unavailable.
+
+<ScreenshotPlaceholder
+  title="Checkout unavailable state"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+### 7. Complete payment and return to the storefront success page
+
+After successful payment or order creation, the customer lands on the order-created page rather than staying in the cart.
+
+<ScreenshotPlaceholder
+  title="Return from hosted payment or checkout completion"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+## Review the order-created page
+
+### 8. Confirm the order number and success state
+
+The order-created page saves the order and shows the order number clearly.
+
+<ScreenshotPlaceholder
+  title="Order created page"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+### 9. Review the WhatsApp message preview
+
+The success page includes a WhatsApp message preview so the customer can see the initial pickup update shape.
+
+<ScreenshotPlaceholder
+  title="WhatsApp message preview on success page"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+### 10. Review guest account-linking actions when applicable
+
+Guest checkout can expose follow-up actions such as creating an account or linking to an existing account without blocking the order itself.
+
+<ScreenshotPlaceholder
+  title="Guest post-checkout account-linking actions"
+  pathHint="static/img/storefront/checkout/placeholder.svg"
+/>
+
+## Good practice
+
+- Test empty-cart, valid-cart, and blocked-checkout states separately.
+- Verify that the chosen location and ready time are reflected on the success page.
+- Keep screenshots for payment, success, and guest-link prompts separate because they are different states in the same flow.

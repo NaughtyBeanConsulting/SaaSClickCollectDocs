@@ -1,6 +1,6 @@
 ---
 title: Branding
-description: Set a storefront theme, update hero content, and control layout, fonts, and color.
+description: Set a storefront theme, update hero content, manage the hero image card, and control layout, fonts, and color.
 ---
 
 import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
@@ -13,7 +13,7 @@ Open the Branding page at `https://clickcollect.coffee/portal/branding/` to cont
 
 - Theme direction and preset styling
 - Storefront title, tagline, announcement bar, and hero copy
-- Logo, hero image, and default product image
+- Logo, hero image card, and default product image
 - Hero layout, navigation style, button style, card style, and corner radius
 - Body font, heading font, and the full color system
 
@@ -21,7 +21,7 @@ Open the Branding page at `https://clickcollect.coffee/portal/branding/` to cont
 
 ### 1. Open **Branding** in the portal navigation
 
-The page loads the **Storefront Branding Editor** and keeps a live preview on the right side of the screen.
+The page loads the **Storefront Branding Editor** and keeps a live preview on the right side of the screen. The preview now renders the hero image inside the storefront hero card so you can judge the crop before saving.
 
 <ScreenshotPlaceholder
   title="Branding page landing state"
@@ -73,7 +73,13 @@ Add the three images that shape the storefront most clearly:
 - `Hero image`
 - `Default product image`
 
-Uploads save as soon as you select the file. If you do not add a hero image, the preview can fall back to the default product image.
+Use these file rules and sizes:
+
+- `Logo`: recommended `512 x 512 px`, square, PNG or JPG only.
+- `Hero image`: recommended `1600 x 1200 px`, PNG or JPG only. This is the image shown inside the hero card preview.
+- `Default product image`: recommended `1200 x 1200 px`, square, PNG or JPG only.
+
+Uploads save as soon as you select the file. If you do not add a hero image, the preview can fall back to the default product image inside the hero card.
 
 <ScreenshotPlaceholder
   title="Visual asset upload section"
@@ -132,5 +138,5 @@ At the top of the page, the status panel should show that live preview and autos
 
 - Use a preset as a starting point instead of building the whole look from scratch.
 - Keep headline and CTA text short enough to stay readable in the preview.
-- Upload a hero image that still reads well when cropped.
+- Upload a hero image that still reads well inside the hero card crop.
 - Treat the muted and footer colors as readability controls, not just decorative colors.

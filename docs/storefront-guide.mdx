@@ -1,0 +1,63 @@
+---
+sidebar_position: 20
+title: Storefront Guide
+description: Start here for customer-facing storefront documentation.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# ClickCollect storefront guide
+
+This documentation set covers the customer-facing storefront experience using [nbc.clickcollect.coffee](https://nbc.clickcollect.coffee/) as the working reference. It focuses on the flow a customer sees from browsing the menu through checkout, account access, WhatsApp settings, and order updates.
+
+## What this section covers
+
+| Storefront area | What it covers |
+| --- | --- |
+| Guest checkout | Completing an order without creating an account |
+| Sign in | Google-only sign-in for orders, checkout, and repeat use |
+| Checkout | Contact details, collection location, pickup timing, and payment |
+| Orders | Accessing order history and linking older guest orders |
+| About | Brand-story and trust-building content on the storefront |
+| How It Works | The customer education flow for ordering and collection |
+| WhatsApp settings | Managing saved WhatsApp number, preferred location, and payment defaults |
+| WhatsApp notifications | New-order updates, post-checkout prompts, and linking guest orders |
+| Account linking | Turning a guest order into a signed-in customer profile |
+
+<ScreenshotPlaceholder
+  title="Storefront homepage and nav overview"
+  note="Capture the public storefront hero, bottom navigation, and menu-category surface from the live storefront."
+  pathHint="static/img/storefront/nav/placeholder.svg"
+/>
+
+## Storefront navigation order
+
+The live bottom navigation on the reference storefront exposes these customer routes:
+
+- `Menu`
+- `Orders`
+- `Cart`
+- `About`
+- `Settings`
+
+Customers can begin from the menu immediately and only need to sign in when they want account-linked history, preferences, or faster repeat ordering.
+
+## Before you document or demo the flow
+
+- Use a public storefront URL, not the portal.
+- Keep one clean browser session for guest checkout testing.
+- Keep a second browser session available for Google sign-in and linked-order testing.
+- Expect the cart to show guest and sign-in options side by side when the customer is not authenticated.
+- Expect WhatsApp prompts to depend on whether the customer provided a usable WhatsApp-capable phone number.
+
+## Next steps
+
+- [Guest Checkout](./storefront/guest-checkout.mdx)
+- [Sign In](./storefront/sign-in.mdx)
+- [Checkout](./storefront/checkout.mdx)
+- [Orders](./storefront/orders.mdx)
+- [About](./storefront/about.mdx)
+- [How It Works](./storefront/how-it-works.mdx)
+- [WhatsApp Settings](./storefront/whatsapp-settings.mdx)
+- [WhatsApp Notifications](./storefront/whatsapp-notifications.mdx)
+- [Account Linking](./storefront/account-linking.mdx)

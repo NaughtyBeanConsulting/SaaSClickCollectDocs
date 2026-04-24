@@ -1,0 +1,81 @@
+---
+title: Orders
+description: Explain the storefront orders page, sign-in requirement, and WhatsApp order linking.
+---
+
+import ScreenshotPlaceholder from '@site/src/components/ScreenshotPlaceholder';
+
+# Orders
+
+The customer-facing orders page is where signed-in customers review order history. When a customer is signed out, this route first presents the Google sign-in page. When the customer is signed in but still has no saved WhatsApp number, the page can also prompt them to link older guest orders.
+
+## What this flow covers
+
+- Opening the orders page from storefront navigation
+- Understanding the sign-in requirement
+- Reviewing order history after authentication
+- Linking older guest orders into a signed-in profile
+
+## Open the orders page
+
+### 1. Use the **Orders** item in the storefront navigation
+
+The bottom navigation exposes **Orders** as a primary customer destination.
+
+<ScreenshotPlaceholder
+  title="Orders navigation entry point"
+  pathHint="static/img/storefront/orders/placeholder.svg"
+/>
+
+### 2. Review the signed-out state
+
+If the customer is not authenticated, the orders route shows the same Google-only sign-in message used elsewhere in the storefront.
+
+<ScreenshotPlaceholder
+  title="Signed-out orders page"
+  pathHint="static/img/storefront/orders/placeholder.svg"
+/>
+
+### 3. Sign in with Google to access order history
+
+Customers need Google sign-in before orders can load against their profile.
+
+<ScreenshotPlaceholder
+  title="Orders page sign-in requirement"
+  pathHint="static/img/storefront/orders/placeholder.svg"
+/>
+
+## Review the signed-in orders view
+
+### 4. Confirm the order-history surface after sign-in
+
+Once authenticated, the customer should land on the actual order-history page instead of being sent elsewhere.
+
+<ScreenshotPlaceholder
+  title="Signed-in order history view"
+  pathHint="static/img/storefront/orders/placeholder.svg"
+/>
+
+### 5. Review the **Link my WhatsApp orders** prompt when it appears
+
+If the customer does not yet have a saved WhatsApp number, the orders page can show a panel that invites them to bring older guest orders into the account.
+
+<ScreenshotPlaceholder
+  title="Link my WhatsApp orders panel"
+  pathHint="static/img/storefront/orders/placeholder.svg"
+/>
+
+### 6. Open the WhatsApp linking flow from orders
+
+Use the panel action to verify the mobile number that was used during guest checkout and attach matching past orders.
+
+<ScreenshotPlaceholder
+  title="Orders page to WhatsApp linking handoff"
+  pathHint="static/img/storefront/orders/placeholder.svg"
+/>
+
+## Good practice
+
+- Test orders as both a signed-out and signed-in customer.
+- Capture the link prompt separately from normal history because not every customer sees it.
+- Use the same WhatsApp number from guest checkout if the goal is to absorb older guest orders into the signed-in account.
