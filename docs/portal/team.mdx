@@ -11,6 +11,14 @@ Open the Team page at `https://clickcollect.coffee/portal/staff/` to manage acce
 
 The current portal uses **people with roles**, not named team groups. If you are looking for “teams”, use the Team page to add each person and assign them to the right location or locations.
 
+## Verification and sign-in rules
+
+- Every owner and team member must verify their email before the portal allows access.
+- Invited team members receive a verification email first and only become fully usable in the Team UI after they open the link.
+- The Team page now shows `Verified` or `Pending verification` for each person.
+- If a person wants to use Google sign-in later, invite them with that same Gmail address from the start.
+- A verified Gmail-based account can use Google sign-in going forward and does not need to rely on the password day to day.
+
 ## How roles work
 
 | Role | What the role can do |
@@ -80,19 +88,28 @@ After saving, confirm the person now shows the correct:
 - Role badge
 - Assigned locations
 - Active badge
+- Verification badge
 
 <ScreenshotPlaceholder
   title="Saved team member row"
   pathHint="static/img/portal/team/05-saved-member.png"
 />
 
+### 6. Resend verification when someone misses the first email
+
+If the owner or a pending team member did not receive the original verification message, use the visible **Resend verification** action from the Team page.
+
+- The owner row exposes a resend action while the owner email is still pending.
+- Each pending team member row also exposes a resend action.
+- Once the person verifies successfully, the resend action disappears and the badge changes to `Verified`.
+
 ## Billing and ownership notes
 
-### 6. Watch for team-member billing prompts
+### 7. Watch for team-member billing prompts
 
 Adding an active non-owner can trigger billing if the account has no open team-member capacity left for the current cycle.
 
-### 7. Handle owner changes carefully
+### 8. Handle owner changes carefully
 
 Only the current owner can add, edit, or remove owner-level access.
 
